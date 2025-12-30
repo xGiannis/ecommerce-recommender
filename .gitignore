@@ -1,0 +1,3 @@
+.env
+data/external/user_product_rating.parquet
+.venv/
