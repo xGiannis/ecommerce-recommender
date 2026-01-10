@@ -13,3 +13,15 @@ def load_user_product_rating(limit: int | None = None) -> pd.DataFrame:
         q += f" LIMIT {int(limit)}"
 
     return pd.read_sql(q, engine)
+
+
+def load_order_item_review_ml(limit: int | None = None) -> pd.DataFrame:
+    cfg = DBConfig()
+    url = f"mysql+pymysql://{cfg.user}:{cfg.password}@{cfg.host}:{cfg.port}/{cfg.database}"
+    engine = create_engine(url)
+
+    q = "SELECT * FROM order_item_review_ml"
+    if limit is not None:
+        q += f" LIMIT {int(limit)}"
+
+    return pd.read_sql(q, engine)
