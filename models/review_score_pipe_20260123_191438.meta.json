@@ -1,0 +1,51 @@
+{
+  "trained_at": "20260123_191438",
+  "limit": null,
+  "metrics": {
+    "mae": 0.8998925575674145,
+    "rmse": 1.1604094252701,
+    "accuracy_exact": 0.27238480268296045,
+    "off_by_more_than1": 0.13005926402352183
+  },
+  "feature_spec": {
+    "numeric": [
+      "price",
+      "freight_value",
+      "product_weight_g",
+      "product_length_cm",
+      "product_height_cm",
+      "product_width_cm",
+      "delivery_time_days",
+      "delay_vs_estimated_days",
+      "max_installments",
+      "total_payment_value"
+    ],
+    "categorical_other": [
+      "product_category_name",
+      "product_category_name_english",
+      "order_status",
+      "main_payment_type"
+    ],
+    "categorical_high_card": [
+      "seller_id"
+    ]
+  },
+  "training_columns": [
+    "seller_id",
+    "price",
+    "freight_value",
+    "product_category_name",
+    "product_category_name_english",
+    "product_weight_g",
+    "product_length_cm",
+    "product_height_cm",
+    "product_width_cm",
+    "order_status",
+    "delivery_time_days",
+    "delay_vs_estimated_days",
+    "main_payment_type",
+    "max_installments",
+    "total_payment_value"
+  ],
+  "target": "review_score"
+}
