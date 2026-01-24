@@ -1,4 +1,4 @@
-# Olist Review Score Predictor (MySQL → Training → FastAPI)
+# 📦 Olist Review Score Predictor (MySQL → Training → FastAPI)
 
 Entrené un modelo que predice el puntaje de una review (1–5) usando datos del dataset Olist almacenados en **MySQL**.  
 El proyecto está pensado como “mini-producto”: el entrenamiento se ejecuta contra una **base funcional** (no archivos parquet) y el modelo se expone como una **API**.
@@ -22,7 +22,7 @@ Definí vistas agregadas y una vista final orientada a ML:
   (concentra features numéricas y categóricas + `review_score` como target)
 
 Esto permite que el entrenamiento se ejecute siempre sobre la **misma interfaz estable** (la vista), aunque los datos subyacentes cambien.
-Estas implementaciones se encuentran en la carpeta sql\
+Estas implementaciones se encuentran en la carpeta `sql/`
 
 ## Entrenamiento desde MySQL
 El endpoint `/retrain` ejecuta un `SELECT * FROM order_item_review_ml`, entrena y guarda:
